@@ -48,10 +48,15 @@ gulp.task('js', function() {
     .pipe(gulp.dest(publish_folder+'/js'))
 
     // minifier
-    // .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.uglify())
-    .pipe(plugins.concat('app.all.min.js', {newLine: ';'}))
-    // .pipe(plugins.sourcemaps.write())
+    .pipe(plugins.sourcemaps.init())
+        // .pipe(plugins.concat('app.all.min.js', {newLine: ';'}))
+        .pipe(plugins.uglify())
+        .pipe(
+            plugins.rename({
+                suffix: ".min"
+            })
+        )
+    .pipe(plugins.sourcemaps.write('./'))
     .pipe(gulp.dest(publish_folder+'/js'))
 
     // notify
