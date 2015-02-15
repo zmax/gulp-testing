@@ -2,6 +2,10 @@
     display: flex
 }
 
+body {
+    margin: 2em;
+}
+
 .app {
     margin: 1.5em;
 }

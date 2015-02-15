@@ -1,2 +1,7 @@
+src/lib/*
 build/*
+public/css/*
+public/fonts/*
+public/js/*
 node_modules/*
+bower_components/*

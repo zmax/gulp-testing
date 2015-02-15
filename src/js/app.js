@@ -1,1 +1,4 @@
-var hello = 'Hello World!';
+var module = {};
+var app = {};
+
+module.a = new ModuleA;

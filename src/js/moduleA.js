@@ -1,3 +1,4 @@
 function ModuleA() {
-}
-module.export = ModuleA;
+    this.name = 'moduleA';
+    console.log(this.name + ' loaded.');
+};

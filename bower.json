@@ -1,0 +1,21 @@
+{
+  "name": "gulp-test",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zmax/gulp-testing",
+  "authors": [
+    "Starck Lin <zenyer@gmail.com>"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11",
+    "bootstrap": "~3.3.2"
+  }
+}
