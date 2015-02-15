@@ -13,4 +13,7 @@ gulp bower
 
 # compile and watch
 gulp
+
+# clear generated files
+gulp clear
 ```

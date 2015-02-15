@@ -30,7 +30,7 @@ var paths = {
 
 // Tasks
 
-gulp.task('default', ['clear', 'js', 'css', 'bootstrap_fonts', 'watch']);
+gulp.task('default', ['js', 'css', 'bootstrap_fonts', 'watch']);
 
 gulp.task('clear', function(cb) {
     del([
