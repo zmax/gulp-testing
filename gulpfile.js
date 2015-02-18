@@ -44,42 +44,42 @@ gulp.task('clear', function(cb) {
 gulp.task('js', function() {
 
     return gulp.src(paths.scripts)
-    .pipe(plugins.concat('app.all.js', {newLine: ';'}))
-    .pipe(gulp.dest(publish_folder+'/js'))
+        .pipe(plugins.concat('app.all.js', {newLine: ';'}))
+        .pipe(gulp.dest(publish_folder+'/js'))
 
-    // minifier
-    .pipe(plugins.sourcemaps.init())
-        // .pipe(plugins.concat('app.all.min.js', {newLine: ';'}))
-        .pipe(plugins.uglify())
-        .pipe(
-            plugins.rename({
-                suffix: ".min"
-            })
-        )
-    .pipe(plugins.sourcemaps.write('./'))
-    .pipe(gulp.dest(publish_folder+'/js'))
+        // minifier
+        .pipe(plugins.sourcemaps.init())
+            // .pipe(plugins.concat('app.all.min.js', {newLine: ';'}))
+            .pipe(plugins.uglify())
+            .pipe(
+                plugins.rename({
+                    suffix: ".min"
+                })
+            )
+        .pipe(plugins.sourcemaps.write('./'))
+        .pipe(gulp.dest(publish_folder+'/js'))
 
-    // notify
-    .pipe(plugins.notify('Javascript files compilied!'));
+        // notify
+        .pipe(plugins.notify('Javascript files compilied!'));
 
 });
 
 gulp.task('css', function() {
 
     return gulp.src(paths.stylesheets)
-    .pipe(plugins.concat('app.css'))
-    .pipe(plugins.autoprefixer())
-    .pipe(gulp.dest(publish_folder+'/css'))
+        .pipe(plugins.concat('app.css'))
+        .pipe(plugins.autoprefixer())
+        .pipe(gulp.dest(publish_folder+'/css'))
 
-    // minifier
-    .pipe(plugins.minifyCss())
-    .pipe(plugins.rename({
-        suffix: ".min"
-    }))
-    .pipe(gulp.dest(publish_folder+'/css'))
+        // minifier
+        .pipe(plugins.minifyCss())
+        .pipe(plugins.rename({
+            suffix: ".min"
+        }))
+        .pipe(gulp.dest(publish_folder+'/css'))
 
-    // notify
-    .pipe(plugins.notify('Stylesheet files compilied!'));
+        // notify
+        .pipe(plugins.notify('Stylesheet files compilied!'));
 
 });
 
